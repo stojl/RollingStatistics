@@ -1,6 +1,6 @@
-#' Running covariance
+#' Rolling covariance
 #'
-#' A function for creating a running covariance object. Beware, that the
+#' A function for creating a rolling covariance object. Beware, that the
 #' function returned is not symmetric.
 #'
 #' @return A function that takes a numeric vector as argument
@@ -11,7 +11,7 @@
 #' a <- c(1, 2, 3, 4, 5)
 #' b <- c(4, 2, 5, 1, 3)
 #' c <- c(6, 4, 10, 4, 6)
-#' covariance <- running_variance()
+#' covariance <- rolling_variance()
 #'
 #' # Returns the covariance of vector 'a' and vector 'b'
 #' covariance(a, b)
@@ -22,7 +22,7 @@
 #'
 #' # Returns the covariance of vector c(a, a) and vector c(b, c)
 #' covariance(a, c)
-running_covariance <- function(df = 1) {
+rolling_covariance <- function(df = 1) {
   force(df)
   m <- 0
   SP <- 0

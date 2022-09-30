@@ -1,5 +1,5 @@
-Package: RunningStatistics
-Title: RunningStatistics - update statistics based on new samples
+Package: RollingStatistics
+Title: RollingStatistics - update statistics based on new samples
 Version: 0.0.1
 Authors@R: 
     person("Lucas Støjko", "Andersen", , "lucashillerod@hotmail.com", role = c("aut", "cre"),

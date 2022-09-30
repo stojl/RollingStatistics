@@ -1,6 +1,6 @@
-#' Running variance
+#' Rolling variance
 #'
-#' A function for creating a running variance object.
+#' A function for creating a rolling variance object.
 #'
 #' @return A function that takes a numeric vector as argument
 #' @param df Degrees of freedom used in the empirical estimate.
@@ -9,11 +9,11 @@
 #' @examples
 #' a <- c(1, 2, 3, 4, 5)
 #' b <- c(4, 2, 5, 1, 3)
-#' sigma <- running_variance()
+#' sigma <- rolling_variance()
 #' sigma(a) # Returns the variance of vector 'a'
 #' sigma()  # Returns the current variance - the variance of vector 'a'
 #' sigma(b) # Returns the variance of vector c(a, b)
-running_variance <- function(df = 1) {
+rolling_variance <- function(df = 1) {
   force(df)
   m <- 0
   SSQ <- 0
